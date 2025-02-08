@@ -14,6 +14,5 @@ class PresidentialPardonForm : public AForm
 		PresidentialPardonForm &operator=(const PresidentialPardonForm &other);
 
 		void perfromAction(std::string target) const;
-		PresidentialPardonForm *create(std::string target) const;
-		AForm *create() const;
+		AForm *create(std::string target) const;
 };

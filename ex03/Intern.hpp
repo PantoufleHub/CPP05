@@ -2,24 +2,22 @@
 
 #include <iostream>
 #include "AForm.hpp"
+#include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "InvalidForm.hpp"
 
-// template <typename T> T *createForm(std::string, std::string);
-// typedef struct forms
-// {
-// 	char	*name;
-// 	AForm	*copy;
-// } forms;
 
-typedef struct s_form_dict
+typedef struct forms
 {
 	std::string name;
-	
-} t_form_dict;
+	AForm		*form;
+} forms;
 
 class Intern
 {
 	private:
-		t_form_dict _knowledge;
+		forms _knowledge[3];
 	public:
 		Intern();
 		Intern(const Intern &other);

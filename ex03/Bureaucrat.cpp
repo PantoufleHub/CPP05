@@ -18,25 +18,25 @@ void Bureaucrat::_setGrade(int grade)
 
 Bureaucrat::Bureaucrat() : _name("Unknown bureaucrat")
 {
-	std::cout << "Default Bureaucrat constructor called" << std::endl;
+	// std::cout << "Default Bureaucrat constructor called" << std::endl;
 	this->_setGrade(150);
 }
 
 Bureaucrat::Bureaucrat(std::string name, int grade) : _name(name)
 {
-	std::cout << "Bureaucrat base constructor called" << std::endl;
+	// std::cout << "Bureaucrat base constructor called" << std::endl;
 	this->_setGrade(grade);
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &other) : _name(other.getName())
 {
-	std::cout << "Bureaucrat copy constructor called" << std::endl;
+	// std::cout << "Bureaucrat copy constructor called" << std::endl;
 	this->_setGrade(other.getGrade());
 }
 
 Bureaucrat::~Bureaucrat ()
 {
-	std::cout << "Default Bureaucrat destructor called" << std::endl;
+	// std::cout << "Default Bureaucrat destructor called" << std::endl;
 }
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)

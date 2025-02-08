@@ -5,22 +5,27 @@
 
 RobotomyRequestForm::RobotomyRequestForm() : AForm("Robotomy request form", 72, 45, "")
 {
-	std::cout << "Default RobotomyRequestForm constructor called" << std::endl;
+	// std::cout << "Default RobotomyRequestForm constructor called" << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(std::string target) : AForm("Robotomy request form", 72, 45, target)
 {
-	std::cout << "Default RobotomyRequestForm constructor called" << std::endl;
+	// std::cout << "Default RobotomyRequestForm constructor called" << std::endl;
 }
 
 RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &other) : AForm("Robotomy request form", 72, 45, other.getTarget())
 {
-	std::cout << "RobotomyRequestForm copy constructor called" << std::endl;
+	// std::cout << "RobotomyRequestForm copy constructor called" << std::endl;
 }
 
 RobotomyRequestForm::~RobotomyRequestForm ()
 {
-	std::cout << "Default RobotomyRequestForm destructor called" << std::endl;
+	// std::cout << "Default RobotomyRequestForm destructor called" << std::endl;
+}
+
+AForm *RobotomyRequestForm::create(std::string target) const
+{
+	return (AForm *)(new RobotomyRequestForm(target));
 }
 
 void RobotomyRequestForm::perfromAction(std::string target) const
@@ -40,6 +45,6 @@ void RobotomyRequestForm::perfromAction(std::string target) const
 
 RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &other)
 {
-	AForm::operator=(other);
+	(void)other;
 	return *this;
 }

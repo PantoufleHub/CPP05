@@ -2,24 +2,24 @@
 
 AForm::AForm() : _name("Unknown form"), _isSigned(false), _signGrade(150), _execGrade(150), _target("")
 {
-	std::cout << "Default Form constructor called" << std::endl;
+	// std::cout << "Default Form constructor called" << std::endl;
 }
 
 AForm::AForm(std::string name, int signGrade, int execGrade, std::string target) : _name(name), _isSigned(false), _signGrade(signGrade), _execGrade(execGrade), _target(target)
 {
-	std::cout << "Form constructor called" << std::endl;
+	// std::cout << "Form constructor called" << std::endl;
 	_setSignGrade(signGrade);
 	_setExecGrade(execGrade);
 }
 
 AForm::AForm(const AForm &other) : _name(other.getName()), _isSigned(false), _signGrade(other.getSignGrade()), _execGrade(other.getExecGrade()), _target(other.getTarget())
 {
-	std::cout << "Form copy constructor called" << std::endl;
+	// std::cout << "Form copy constructor called" << std::endl;
 }
 
 AForm::~AForm ()
 {
-	std::cout << "Default Form destructor called" << std::endl;
+	// std::cout << "Default Form destructor called" << std::endl;
 }
 
 void AForm::_setSignGrade(int grade)
@@ -158,7 +158,8 @@ void AForm::execute(const Bureaucrat &executor) const
 
 std::ostream &operator<<(std::ostream &os, const AForm &form)
 {
-	os << "Form: " << form.getName() << ":" << std::endl;
+	os << "-------------------------" << std::endl;
+	os << form.getName() << ":" << std::endl;
 	if (form.getIsSigned())
 		os << "Signed: yes" << std::endl;
 	else

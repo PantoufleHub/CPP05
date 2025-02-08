@@ -1,6 +1,7 @@
 NAME		= atleastthisbeatscoffeemaking
 SRCS		= main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp \
-				RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
+				RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp \
+				InvalidForm.cpp
 FLAGS		= -Wall -Werror -Wextra -std=c++98
 CC			= c++
 
