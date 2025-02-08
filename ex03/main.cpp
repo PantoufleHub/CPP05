@@ -15,6 +15,7 @@ int main(void)
 	AForm *rrf2 = someRandomIntern.makeForm("shrubbery creation", "shrubs");
 	AForm *rrf3 = someRandomIntern.makeForm("presidential pardon", "Bob");
 	AForm *rrf4 = someRandomIntern.makeForm("patati patata", "larry");
+
 	std::cout << *rrf1;
 	std::cout << *rrf2;
 	std::cout << *rrf3;
@@ -24,5 +25,10 @@ int main(void)
 	rrf2->execute(b2);
 	rrf3->execute(b2);
 	rrf4->execute(b2);
+
+	delete rrf1;
+	delete rrf2;
+	delete rrf3;
+	delete rrf4;
 	return 0;
 }
